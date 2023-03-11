@@ -153,14 +153,12 @@ for sub=1:23                                                                % 23
     [accuracy,stats,C] = DCNNclassifier(XTesting,YTesting_val,net,verbatim);
     fprintf('DCNN Accuracy for Valence :%f \n',accuracy);
     DCNN_ValAcc(l,:) = accuracy;
-    fname = strcat('Val_DCNN_stats','.xls');
     DCNN_ValMeasures(:,:) = stats{1:9,["classes","microAVG","macroAVG"]};
+    %fname = strcat('Val_DCNN_stats','.xls');
     %writetable(stats,fname);
-    fname = strcat('Val_DCNN_confusion','.xls');
     DCNN_ValCM(:,:) = C;
+    %fname = strcat('Val_DCNN_confusion','.xls');
     %writematrix(C,fname)     
-    fprintf('\n')
-    fprintf('\n')
     
     %% Extract Features using DCNN for arousal
     fprintf('Subject: %d   AROUSAL :\n',sub)
@@ -183,13 +181,12 @@ for sub=1:23                                                                % 23
     [accuracy,stats,C] = DCNNclassifier(XTesting,YTesting_aro,net,verbatim);
     fprintf('DCNN Accuracy for Arousal :%f \n',accuracy);
     DCNN_AroAcc(l,:) = accuracy;
-    fname = strcat('Aro_DCNN_stats','.xls');
     DCNN_AroMeasures(:,:) = stats{1:9,["classes","microAVG","macroAVG"]};
+    %fname = strcat('Aro_DCNN_stats','.xls');
     %writetable(stats,fname);
-    fname = strcat('Aro_DCNN_confusion','.xls');
     DCNN_AroCM(:,:) = C;
+    %fname = strcat('Aro_DCNN_confusion','.xls');
     %writematrix(C,fname)
-    fprintf('\n')
     
     %% Extract Features using CNN for dominance
     fprintf('Subject: %d   DOMINANCE :\n',sub)
@@ -212,11 +209,11 @@ for sub=1:23                                                                % 23
     [accuracy,stats,C] = DCNNclassifier(XTesting,YTesting_dom,net,verbatim);
     fprintf('DCNN Accuracy for Dominance :%f \n',accuracy);
     DCNN_DomAcc(l,:) = accuracy;
-    fname = strcat('Dom_DCNN_stats','.xls');
     DCNN_DomMeasures(:,:) = stats{1:9,["classes","microAVG","macroAVG"]};
+    %fname = strcat('Dom_DCNN_stats','.xls');
     %writetable(stats,fname);
-    fname = strcat('Dom_DCNN_confusion','.xls');
     DCNN_DomCM(:,:) = C;
+    %fname = strcat('Dom_DCNN_confusion','.xls');
     %writematrix(C,fname) 
-    fprintf('\n')
+    
 end
