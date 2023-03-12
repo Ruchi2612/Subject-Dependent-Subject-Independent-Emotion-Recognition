@@ -37,16 +37,16 @@ verbatim = 0;
     testFeatures = data(test,:);
     YTesting = label(test);
     
-    %DCNN
-    [accuracy,stats,C] = DCNNclassifier(testFeatures,YTesting,net,verbatim);
-    fprintf('DCNN:%f \n',accuracy);
-    DCNN_Acc = accuracy;
-    DCNN_Measures = stats{1:9,["classes","microAVG","macroAVG"]};
-    %fname = strcat('DCNN_stats','.xls');
-    %writetable(stats,fname);
-    DCNN_CM = C;
-    %fname = strcat('DCNN_confusion','.xls');
-    %writematrix(C,fname);
+%     %DCNN
+%     [accuracy,stats,C] = DCNNclassifier(testFeatures,YTesting,net,verbatim);
+%     fprintf('DCNN:%f \n',accuracy);
+%     DCNN_Acc = accuracy;
+%     DCNN_Measures = stats{1:9,["classes","microAVG","macroAVG"]};
+%     %fname = strcat('DCNN_stats','.xls');
+%     %writetable(stats,fname);
+%     DCNN_CM = C;
+%     %fname = strcat('DCNN_confusion','.xls');
+%     %writematrix(C,fname);
 
     %AdaBoost   
     [accuracy,stats,C] = ABclassifier(trainFeatures,YTraining,testFeatures,YTesting,verbatim);
@@ -171,16 +171,16 @@ verbatim = 0;
     testFeatures = data(test,:);
     YTesting = label(test);
     
-    %DCNN
-    [accuracy,stats,C] = DCNNclassifier(testFeatures,YTesting,net,verbatim);
-    fprintf('DCNN:%f \n',accuracy);
-    DCNN_Acc = accuracy;
-    DCNN_Measures = stats{1:9,["classes","microAVG","macroAVG"]};
-    %fname = strcat('DCNN_stats','.xls');
-    %writetable(stats,fname);
-    DCNN_CM = C;
-    %fname = strcat('DCNN_confusion','.xls');
-    %writematrix(C,fname);
+%     %DCNN
+%     [accuracy,stats,C] = DCNNclassifier(testFeatures,YTesting,net,verbatim);
+%     fprintf('DCNN:%f \n',accuracy);
+%     DCNN_Acc = accuracy;
+%     DCNN_Measures = stats{1:9,["classes","microAVG","macroAVG"]};
+%     %fname = strcat('DCNN_stats','.xls');
+%     %writetable(stats,fname);
+%     DCNN_CM = C;
+%     %fname = strcat('DCNN_confusion','.xls');
+%     %writematrix(C,fname);
 
     %AdaBoost   
     [accuracy,stats,C] = ABclassifier(trainFeatures,YTraining,testFeatures,YTesting,verbatim);
@@ -305,16 +305,16 @@ verbatim = 0;
     testFeatures = data(test,:);
     YTesting = label(test);
     
-    %DCNN
-    [accuracy,stats,C] = DCNNclassifier(testFeatures,YTesting,net,verbatim);
-    fprintf('DCNN:%f \n',accuracy);
-    DCNN_Acc = accuracy;
-    DCNN_Measures = stats{1:9,["classes","microAVG","macroAVG"]};
-    %fname = strcat('DCNN_stats','.xls');
-    %writetable(stats,fname);
-    DCNN_CM = C;
-    %fname = strcat('DCNN_confusion','.xls');
-    %writematrix(C,fname);
+%     %DCNN
+%     [accuracy,stats,C] = DCNNclassifier(testFeatures,YTesting,net,verbatim);
+%     fprintf('DCNN:%f \n',accuracy);
+%     DCNN_Acc = accuracy;
+%     DCNN_Measures = stats{1:9,["classes","microAVG","macroAVG"]};
+%     %fname = strcat('DCNN_stats','.xls');
+%     %writetable(stats,fname);
+%     DCNN_CM = C;
+%     %fname = strcat('DCNN_confusion','.xls');
+%     %writematrix(C,fname);
 
     %AdaBoost   
     [accuracy,stats,C] = ABclassifier(trainFeatures,YTraining,testFeatures,YTesting,verbatim);
